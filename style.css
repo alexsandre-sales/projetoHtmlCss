@@ -1,0 +1,294 @@
+/* Reset no CSS de alguns estilos e padrões */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  font-family: 'Roboto', sans-serif;
+}
+/* Criado para colocar o que se repete muito no codigo */
+:root {
+  --text-color: #d3ffc7;
+  --text-color-body: #000;
+  --text-color-hover: #29a5a3;
+  --hederFooter-color: #00615f;
+}
+/* Chamada das variaveis deve ser 'Atributo' 'valor com var(nome da variavel)' */
+body {
+  padding-top: 7%;
+  color: var(--text-color);
+  overflow-x: hidden;
+}
+header {
+  height: 75px;
+  width: 100%;
+  background-color: var(--hederFooter-color);
+  position: fixed;
+  top: 0;
+}
+/* Estilo padrao das magens laterais de toda pag */
+.container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container-nav {
+  height: 75px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.nav-img img {
+  width: 42px;
+}
+.menu-ul {
+  display: flex;
+  align-items: center;
+}
+.menu-ul li {
+  margin: 0 10px;
+}
+.menu-ul a {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #d3ffc7;
+  padding: 2px 0;
+}
+/* Criado o hover quando passa o mouse sobre o link do ul */
+.menu-ul a:hover {
+  color: var(--text-color-hover);
+}
+.menu-ul a img {
+  margin: 0 5px;
+  width: 24px;
+}
+.container-principal {
+  color: var(--text-color-body);
+  margin-bottom: 30px;
+}
+.container-principal h1 {
+  font-size: 3rem;
+  padding: 30px 0;
+}
+.container-principal p {
+  font-size: 1.5rem;
+  width: 70%;
+  line-height: 1.3;
+  margin: 15px 0;
+}
+.container-foto img {
+  max-width: 25%;
+  min-width: 320px;
+  float: right;
+  margin-top: 40px;
+}
+/* Criação do parallax da img dos ptes */
+.parallax {
+  background-attachment: fixed;
+  background-size: 55%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  /* transform: scale(1.05); */
+}
+.parallax-img {
+  background-image: url('img/imgPets.jpg');
+  width: 100%;
+  height: 400px;
+}
+.produtos {
+  flex-direction: column;
+  margin: 60px auto;
+}
+.produtos h2 {
+  color: var(--text-color-body);
+  font-size: 2.5rem;
+}
+/* Crianção do grid para os produtos, destaque e marcas */
+.grid-container-itens {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 225px 225px;
+  margin: 50px;
+}
+.itens-space {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.itens-space p {
+  font-size: 1.2rem;
+  color: var(--text-color-body);
+}
+footer {
+  height: 100px;
+  width: 100%;
+  background-color: var(--hederFooter-color);
+  display: flex;
+}
+.container-redes {
+  display: flex;
+  align-items: center;
+}
+.container-redes-txt p {
+  margin: 0 10px 5px 0;
+  padding-bottom: 5px;
+  border-bottom: 2px solid black;
+}
+.footer-ul a {
+  display: flex;
+  align-items: center;
+  color: var(--text-color);
+}
+/* Funcionamento do hover do ul footer */
+.footer-ul a:hover {
+  color: var(--text-color-hover);
+}
+.footer-ul a img {
+  width: 24px;
+  margin-right: 5px;
+}
+
+/*------------------------- Pag Servico -------------------------*/
+.container-principal article p {
+  margin-right: 100px;
+}
+.container-servico {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-color-body);
+  font-size: 1.5rem;
+  line-height: 1.3;
+  margin: 0 auto;
+  width: 90%;
+  margin-bottom: 80px;
+}
+.container-foto-servico {
+  width: 26%;
+}
+.foto-leva {
+  width: 250px;
+}
+.container-principal-filhotes {
+  display: flex;
+  justify-content: center;
+  margin: 80px 0;
+}
+/*------------------------- Fim -------------------------*/
+
+/*------------------------- Pag Contact -------------------------*/
+.container-form {
+  width: 45%;
+  margin: 80px auto;
+  color: var(--text-color-body);
+  background-color: #00bbb881;
+  padding: 50px;
+  border-radius: 10px;
+}
+.form-contact {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+fieldset {
+  border: none;
+  margin: 20px 0;
+  color: #767676;
+}
+/* Uso do seletor, pegando o primeiro label do fieldset */
+fieldset label:first-child {
+  font-size: 1.2rem;
+  margin-right: 20px;
+  color: var(--text-color-body);
+}
+/* Usando um seletor pelo valor do atributo type */
+fieldset input[type='checkbox'] {
+  margin: 5px;
+}
+.container-form h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+/* Seletor pegando os filhos do typo label direto do forma-contact */
+.form-contact > label:nth-of-type(1n) {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+.form-contact > select:nth-child(1n) {
+  margin-bottom: 20px;
+  color: var(--hederFooter-color);
+}
+/* .input-andress > option:nth-child(1n) {
+  color: royalblue;
+} */
+
+/* Mesmo estilo aplicado para os input do contato e endereço  */
+.input-contact,
+.input-andress {
+  width: 100%;
+  height: 25px;
+  padding: 0 10px;
+  border-radius: 5px;
+  border: unset;
+  outline: none;
+}
+/* Estilo para os placeholder de todos os inputs */
+input::placeholder {
+  color: var(--hederFooter-color);
+}
+/* Criado a linha que fica embaixo dos input */
+.input-line {
+  display: flex;
+  justify-content: center;
+  height: 3px;
+  width: 98%;
+  margin-left: 4px;
+  border-radius: 5px;
+  margin-bottom: 25px;
+  background-color: rgb(217, 255, 0);
+}
+/* Colocando cor no foco usado dentro do input */
+.input-contact:focus,
+.input-andress:focus {
+  color: #29a5a3;
+}
+textarea {
+  width: 100%;
+  font-family: monospace;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  resize: none;
+}
+textarea:focus {
+  color: var(--hederFooter-color);
+}
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 15px;
+}
+.button-btn {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.button-btn:hover {
+  color: var(--text-color);
+  background-color: var(--hederFooter-color);
+  cursor: pointer;
+}
+/*------------------------- Fim -------------------------*/

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Link de fontes vinda do google -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Pet Feliz</title>
+  </head>
+  <body>
+    <header id="top">
+      <div class="container">
+        <nav class="container-nav">
+          <div class="nav-img">
+            <figure>
+              <img src="img/logo.svg" alt="Logo da empresa" />
+            </figure>
+            <span>Pet Feliz</span>
+          </div>
+
+          <div class="menu">
+            <ul class="menu-ul">
+              <!-- inserido icon dentro da tag 'a', criando um link no icon -->
+              <li>
+                <a href="index.html">
+                  <img src="img/hom.svg" /> <span>Home</span></a
+                >
+              </li>
+              <li>
+                <a href="servico.html">
+                  <img src="img/serv.png" /> <span>Serviços</span></a
+                >
+              </li>
+              <li>
+                <a href="#">
+                  <img src="img/contato.png" />
+                  Contato</a
+                >
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <section>
+      <div class="container">
+        <div class="container-principal">
+          <h1>Seu Pet Feliz</h1>
+        </div>
+      </div>
+
+      <div class="container-form">
+        <div class="form-txt">
+          <h2>Envie-nos uma mensagem</h2>
+        </div>
+        <!-- criado o forma com algumas das opções de input, text,email, number, reset, submit, tel, checkbox, tags select e option
+             criado esse container para dar tamanho fixo -->
+        <div class="container">
+          <form class="form-contact" method="post">
+            <fieldset>
+              <label>Opção de contato</label>
+              <label for="tel">Telefone</label>
+              <input type="checkbox" id="tel" />
+              <label for="sms">SMS</label>
+              <input type="checkbox" id="sms" />
+              <label for="email">Email</label>
+              <input type="checkbox" id="email" />
+            </fieldset>
+            <label>Dados para contato</label>
+            <!-- <label for="fname">Nome: </label> -->
+            <input
+              class="input-contact"
+              id="fname"
+              name="fname"
+              type="text"
+              required
+              placeholder="Nome Completo"
+            />
+            <span class="input-line"></span>
+            <input
+              class="input-contact"
+              id="email"
+              name="email"
+              type="email"
+              required
+              placeholder="email@email.com"
+            />
+            <span class="input-line"></span>
+            <input
+              class="input-contact"
+              id="tel"
+              type="tel"
+              maxlength="11"
+              pattern="[0-9]{11}"
+              required
+              placeholder="(XX)XXXXX-XXXX"
+            />
+            <span class="input-line"></span>
+            <label>Endereço</label>
+            <!-- Select com os estados -->
+            <select class="input-andress" name="estado" id="estado">
+              <option disabled selected>Estados</option>
+              <option value="AC">Acre</option>
+              <option value="AL">Alagoas</option>
+              <option value="AP">Amapá</option>
+              <option value="AM">Amazonas</option>
+              <option value="BA">Bahia</option>
+              <option value="CE">Ceará</option>
+              <option value="DF">Distrito Federal</option>
+              <option value="ES">Espírito Santo</option>
+              <option value="GO">Goiás</option>
+              <option value="MA">Maranhão</option>
+              <option value="MT">Mato Grosso</option>
+              <option value="MS">Mato Grosso do Sul</option>
+              <option value="MG">Minas Gerais</option>
+              <option value="PA">Pará</option>
+              <option value="PB">Paraíba</option>
+              <option value="PR">Paraná</option>
+              <option value="PE">Pernambuco</option>
+              <option value="PI">Piauí</option>
+              <option value="RJ">Rio de Janeiro</option>
+              <option value="RN">Rio Grande do Norte</option>
+              <option value="RS">Rio Grande do Sul</option>
+              <option value="RO">Rondônia</option>
+              <option value="RR">Roraima</option>
+              <option value="SC">Santa Catarina</option>
+              <option value="SP">São Paulo</option>
+              <option value="SE">Sergipe</option>
+              <option value="TO">Tocantins</option>
+            </select>
+            <input
+              class="input-andress"
+              type="text"
+              id="cidade"
+              placeholder="Cidade"
+            />
+            <!-- Criado linha para demarcar os input -->
+            <span class="input-line"></span>
+            <input
+              class="input-andress"
+              type="text"
+              id="end"
+              placeholder="Endereço"
+            />
+            <span class="input-line"></span>
+            <input
+              class="input-andress"
+              type="number"
+              id="numero"
+              placeholder="Número"
+            />
+            <span class="input-line"></span>
+            <input
+              class="input-andress"
+              type="text"
+              id="bairro"
+              placeholder="Bairro"
+            />
+            <span class="input-line"></span>
+            <label for="msg">Mensagem</label><br />
+            <textarea
+              id="msg"
+              cols="30"
+              placeholder="Deixe sua mensagem"
+              rows="10"
+            ></textarea>
+            <!-- Criado div para dar o espaçamento correto-->
+            <div class="button">
+              <input class="button-btn" type="reset" value="Limpar" />
+              <input class="button-btn" type="submit" value="Cadastrar" />
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="container-redes">
+          <div class="container-redes-txt">
+            <p>Nossas redes sociais:</p>
+          </div>
+          <ul class="footer-ul">
+            <li>
+              <a class="fac" href="#"
+                ><img src="img/fac.svg" alt="" /> Facebook</a
+              >
+            </li>
+            <li>
+              <a class="ins" href="#"
+                ><img src="img/int.svg" alt="logo instagram" /> Instagram</a
+              >
+            </li>
+            <li>
+              <a class="twi" href="#"
+                ><img src="img/tw.svg" alt="logo twitter" /> Twitter</a
+              >
+            </li>
+          </ul>
+        </div>
+        <p>&copy; Todos os direitos reservados.</p>
+        <address>
+          <p>Rua: XYZ N° 123</p>
+          <p>Cidade: Alguma - SP</p>
+        </address>
+      </div>
+    </footer>
+  </body>
+</html>
