@@ -1,6 +1,6 @@
 # Projeto de sala de aula
 
-Projeto desenvolvido puramente em HTML, estilização ficará para próximo aula
+Mesmo projeto da aula anterior, agora com CSS.
 
 ## SoulCodeAcademy
 
